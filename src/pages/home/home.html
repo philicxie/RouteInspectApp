@@ -29,7 +29,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Baidu Map
+      Change test 22
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -38,7 +38,22 @@
   <!--<div #container id="container" class="mapContainer"></div>-->
 <!--</ion-content>-->
 
-<ion-content>
-  <img [src]="profilePicture" style="margin: 5px auto; border-radius: 5%;">
+<ion-content padding class="action-sheets-basic-page">
+  <!--<img [src]="profilePicture" style="margin: 5px auto; border-radius: 5%;">-->
+  <!-- <button ion-button block (click)="testNewPage()">
+      haha
+  </button> -->
+  <ion-list>
+      <ion-item>
+          <ion-label fixed>Username</ion-label>
+          <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label fixed>Password</ion-label>
+          <ion-input type="password"></ion-input>
+      </ion-item>
+  </ion-list>
+  <div padding>
+      <button ion-button color="primary" block>Sign In</button>
+  </div>
 </ion-content>
-

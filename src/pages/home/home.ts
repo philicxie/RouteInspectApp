@@ -44,6 +44,7 @@ import {Component, ViewChild} from '@angular/core';
 import {NavController} from 'ionic-angular';
 
 import { File, Camera } from 'ionic-native';
+import { LoginPage } from '../login/login';
 
 
 declare var BMap;
@@ -70,6 +71,7 @@ export class HomePage {
       encodingType: Camera.EncodingType.JPEG,
       sourceType: Camera.PictureSourceType.CAMERA
     };
+
     // Camera.getPicture(options).then(
     //   (imageData) => {
     //     let base64Image = 'data:image/jpeg;base64,' + imageData;
@@ -82,15 +84,14 @@ export class HomePage {
     // );
     //this.loadMap();
   }
+  testNewPage() {
+    console.log('hit here');
+  }
   loadMap() {
-
-
     var map = new BMap.Map(document.getElementById('container'));
     //var map = new BMap.Map(this.mapElement);
     var point = new BMap.Point(116.404, 39.915); //中心点和经纬度
     map.centerAndZoom(point, 10);
     console.log('its ok');
-
-
   }
 }
