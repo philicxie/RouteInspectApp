@@ -4,23 +4,6 @@
   <!--</ion-navbar>-->
 <!--</ion-header>-->
 
-<!--<ion-content padding>-->
-  <!--<h2>Welcome to Ionic! haha</h2>-->
-  <!--<p>-->
-    <!--This starter project comes with simple tabs-based layout for apps-->
-    <!--that are going to primarily use a Tabbed UI.-->
-  <!--</p>-->
-  <!--<p>-->
-    <!--Take a look at the <code>src/pages/</code> directory to add or change tabs,-->
-    <!--update any existing page or create new pages.-->
-  <!--</p>-->
-<!--</ion-content>-->
-
-<!--<ion-header>-->
-  <!--<ion-navbar>-->
-    <!--<ion-title>Alerts</ion-title>-->
-  <!--</ion-navbar>-->
-<!--</ion-header>-->
 
 <!--<ion-content padding>-->
   <!--<button ion-button block color="dark" (click)="doAlert()">Show Basic Alert</button>-->
@@ -29,7 +12,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      水务巡检终端
+      动态
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -38,22 +21,39 @@
   <!--<div #container id="container" class="mapContainer"></div>-->
 <!--</ion-content>-->
 
-<ion-content padding class="action-sheets-basic-page">
-  <!--<img [src]="profilePicture" style="margin: 5px auto; border-radius: 5%;">-->
-  <!-- <button ion-button block (click)="testNewPage()">
-      haha
-  </button> -->
-  <ion-list>
-      <ion-item>
-          <ion-label fixed>账号</ion-label>
-          <ion-input type="text"></ion-input>
-      </ion-item>
-      <ion-item>
-          <ion-label fixed>密码</ion-label>
-          <ion-input type="password"></ion-input>
-      </ion-item>
-  </ion-list>
-  <div padding>
-      <button ion-button color="primary" block (click)="toMainPage()">登陆</button>
-  </div>
+<ion-content>
+    <!-- <ion-card *ngFor="let item of message">
+        <ion-card-content>
+            {{item}}
+        </ion-card-content>
+    </ion-card> -->
+    <ion-list>
+        <ion-item (click)="doAlert()">
+            <ion-thumbnail item-left>
+                <img src="src/assets/img/thumbnail-rolta.png" />
+            </ion-thumbnail>
+            <h2>My Neighbor Torotofewfwefwefwef</h2>
+            <p>
+                Hayao Miyazaki . 1981
+            </p>
+        </ion-item>
+        <ion-item>
+            <ion-thumbnail item-left>
+                <img src="src/assets/img/thumbnail-rolta.png" />
+            </ion-thumbnail>
+            <h2>My Neighbor Torotofewfwefwefwef</h2>
+            <p>
+                Hayao Miyazaki . 1981
+            </p>
+        </ion-item>
+        <ion-item>
+            <ion-thumbnail item-left>
+                <img src="src/assets/img/thumbnail-rolta.png" />
+            </ion-thumbnail>
+            <h2>My Neighbor Torotofewfwefwefwef</h2>
+            <p>
+                Hayao Miyazaki . 1981
+            </p>
+        </ion-item>
+    </ion-list>
 </ion-content>

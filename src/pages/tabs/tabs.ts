@@ -4,6 +4,8 @@ import { HomePage } from '../home/home';
 import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
 
+import { NavController } from 'ionic-angular';
+
 @Component({
   templateUrl: 'tabs.html'
 })
@@ -14,7 +16,7 @@ export class TabsPage {
   tab2Root: any = AboutPage;
   tab3Root: any = ContactPage;
 
-  constructor() {
-
+  constructor(private navCtrl: NavController) {
+      this.navCtrl.remove(0,1,null);
   }
 }

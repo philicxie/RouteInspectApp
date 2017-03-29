@@ -7,16 +7,15 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="action-sheets-basic-page">
-
+<ion-content padding>
   <ion-list>
       <ion-item>
-          <ion-label fixed>账号</ion-label>
-          <ion-input type="text" [(ngModel)]="userInfo.Account"></ion-input>
+          <ion-icon name="lock"></ion-icon>
+          <ion-input type="text" [(ngModel)]="userInfo.Account" placeholder="账号" clearInput></ion-input>
       </ion-item>
       <ion-item>
-          <ion-label fixed>密码</ion-label>
-          <ion-input type="password" [(ngModel)]="loginPassword"></ion-input>
+          <ion-icon name="key"></ion-icon>
+          <ion-input type="password" [(ngModel)]="userInfo.Password" placeholder="密码" clearInput></ion-input>
       </ion-item>
   </ion-list>
   <div padding>

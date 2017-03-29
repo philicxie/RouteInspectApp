@@ -1,10 +1,12 @@
+
+
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
 import { TabsPage } from '../tabs/tabs';
-
 import { Http, Headers } from '@angular/http';
 import 'rxjs/Rx';
+import { ToastController } from 'ionic-angular';
+
 
 /*
   Generated class for the Login page.
@@ -18,7 +20,7 @@ import 'rxjs/Rx';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private http:Http) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, private http:Http, public toastCtrl: ToastController) {}
 
   userInfo = {
       Account: '',
@@ -26,19 +28,16 @@ export class LoginPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+      
   }
 
   toMainPage() {
-      console.log('haha');
       this.navCtrl.push(TabsPage);
   }
 
   login() {
-      //this.toMainPage();
-    //   let headers = new Headers();
-    //   headers.append('Content-Type', 'application/x-www-form-urlencoded');
-    //   let options = new RequestOptions({ headers: headers });
+      this.toMainPage();
+      //this.showToast();
       let url = 'http://192.168.1.59:3000';
       let uri = '/authority/getAllUsers';
       let body = {};
@@ -48,5 +47,14 @@ export class LoginPage {
         .subscribe(data => {
             console.log(data);
         });
+  }
+
+  showToast() {
+      let toast = this.toastCtrl.create({
+          message: 'Ops',
+          duration: 1500,
+          position: "top"
+      });
+      toast.present();
   }
 }

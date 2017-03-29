@@ -1,50 +1,10 @@
-// import { Component } from '@angular/core';
-//
-// import { NavController } from 'ionic-angular';
-//
-// @Component({
-//   selector: 'page-home',
-//   templateUrl: 'home.html'
-// })
-// export class HomePage {
-//
-//   constructor(public navCtrl: NavController) {
-//
-//   }
-//
-// }
-
-// import { Component } from '@angular/core';
-//
-// import { AlertController } from 'ionic-angular';
-//
-//
-// @Component({
-//   selector: 'page-home',
-//   templateUrl: 'home.html'
-//
-// })
-// export class HomePage {
-//
-//   constructor(public alerCtrl: AlertController) { }
-//
-//   doAlert() {
-//     console.log('haha');
-//     let alert = this.alerCtrl.create({
-//       title: 'New Friend!',
-//       message: 'Your friend, Obi wan Kenobi, just approved your friend request!',
-//       buttons: ['Ok']
-//     });
-//     alert.present()
-//   }
-//
-// }
 
 import {Component, ViewChild} from '@angular/core';
 import {NavController} from 'ionic-angular';
 
 import { File, Camera } from 'ionic-native';
 import { LoginPage } from '../login/login';
+import { AlertController } from 'ionic-angular';
 
 
 declare var BMap;
@@ -61,16 +21,20 @@ export class HomePage {
   container: any;
   profilePicture: any;
 
-  constructor(private navCtrl: NavController) {
+  public message;
+
+  constructor(private navCtrl: NavController, public alertCtrl: AlertController) {
   }
   ionViewDidLoad() {
-    console.log("12312312");
-    var options = {
-      quality: 50,
-      destinationType: Camera.DestinationType.FILE_URI,
-      encodingType: Camera.EncodingType.JPEG,
-      sourceType: Camera.PictureSourceType.CAMERA
-    };
+      console.log(this.navCtrl.parent);
+      //this.navCtrl.remove(this.navCtrl.parent);
+      this.message = ['11', '22', '33'];
+    // var options = {
+    //   quality: 50,
+    //   destinationType: Camera.DestinationType.FILE_URI,
+    //   encodingType: Camera.EncodingType.JPEG,
+    //   sourceType: Camera.PictureSourceType.CAMERA
+    // };
 
     // Camera.getPicture(options).then(
     //   (imageData) => {
@@ -93,5 +57,13 @@ export class HomePage {
     var point = new BMap.Point(116.404, 39.915); //中心点和经纬度
     map.centerAndZoom(point, 10);
     console.log('its ok');
+  }
+  doAlert() {
+      let alert = this.alertCtrl.create({
+          title: 'alert',
+          subTitle: 'Click a list item',
+          buttons: ['Ok']
+      });
+      alert.present();
   }
 }
