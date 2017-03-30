@@ -15,6 +15,16 @@
       动态
     </ion-title>
   </ion-navbar>
+  <ion-toolbar no-border-top>
+     <ion-segment [(ngModel)]="pet">
+       <ion-segment-button value="puppies">
+         公开
+       </ion-segment-button>
+       <ion-segment-button value="kittens">
+         私信
+       </ion-segment-button>
+     </ion-segment>
+   </ion-toolbar>
 </ion-header>
 
 <!--<ion-content class="map">-->
@@ -27,10 +37,11 @@
             {{item}}
         </ion-card-content>
     </ion-card> -->
+
     <ion-list>
         <ion-item (click)="doAlert()">
             <ion-thumbnail item-left>
-                <img src="src/assets/img/thumbnail-rolta.png" />
+                <img src="assets/img/thumbnail-rotla.png" />
             </ion-thumbnail>
             <h2>My Neighbor Torotofewfwefwefwef</h2>
             <p>
@@ -39,7 +50,7 @@
         </ion-item>
         <ion-item>
             <ion-thumbnail item-left>
-                <img src="src/assets/img/thumbnail-rolta.png" />
+                <img src="assets/img/thumbnail-rotla.png" />
             </ion-thumbnail>
             <h2>My Neighbor Torotofewfwefwefwef</h2>
             <p>
@@ -48,7 +59,7 @@
         </ion-item>
         <ion-item>
             <ion-thumbnail item-left>
-                <img src="src/assets/img/thumbnail-rolta.png" />
+                <img src="assets/img/thumbnail-rotla.png" />
             </ion-thumbnail>
             <h2>My Neighbor Torotofewfwefwefwef</h2>
             <p>
